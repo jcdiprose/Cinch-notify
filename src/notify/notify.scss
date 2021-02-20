@@ -12,6 +12,7 @@
   padding: 12.5px;
   border-radius: 3px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 @keyframes RightIn {
@@ -34,22 +35,22 @@
 .top-right {
   top: 0;
   right: 0;
-  animation: RightIn 0.3s cubic-bezier(0.4, 0.94, 0.91, 0.91);
+  animation: RightIn 0.3s cubic-bezier(0, 0, 0.15, 0.99);
 }
 .bottom-right {
   bottom: 0;
   right: 0;
-  animation: RightIn 0.3s cubic-bezier(0.4, 0.94, 0.91, 0.91);
+  animation: RightIn 0.3s cubic-bezier(0, 0, 0.15, 0.99);
 }
 .bottom-left {
   bottom: 0;
   left: 0;
-  animation: LeftIn 0.3s cubic-bezier(0.4, 0.94, 0.91, 0.91);
+  animation: LeftIn 0.3s cubic-bezier(0, 0, 0.15, 0.99);
 }
 .top-left {
   top: 0;
   left: 0;
-  animation: LeftIn 0.3s cubic-bezier(0.4, 0.94, 0.91, 0.91);
+  animation: LeftIn 0.3s cubic-bezier(0, 0, 0.15, 0.99);
 }
 
 .warning {

@@ -1,30 +1,16 @@
-# Cinch-Collapse
+# Cinch-Notify
 
-### Cinch Collapse is a minimally styled React collapse and accordian component. It was been developed so that with the least effort you can style it to suit your project.
+### Cinch Notify is a minimally styled React notification component, it comes with warning, error, and success styles which are easily customisable.
 
-#### [Demo](https://codesandbox.io/s/autumn-thunder-vd8ic?fontsize=14&hidenavigation=1&theme=dark)
+#### v1.0.0
 
-#### v2.0.0 released
+```
+Notify Props {
+  type?: 'warning' | 'error' | 'success' | 'notification'
+  position?: 'top-right' | 'bottom-right' | 'bottom-left' | 'top-left'
+  displayTime?: number
+  className?: string
+}
+```
 
-**latest updates**
-
-- onChange listener
-- className prop
-
-**in order to make use of the onChange listener, each panel must have a unique string id**
-
-#### Collapsible
-
-- accordian?: boolean;
-- timeout?: number;
-- ease?: "ease" | "inOut" | "in" | "out" | number[];
-- delay?: number;
-- className?: string;
-- onChange?: (ids: string) => void;
-
-#### Panel
-
-- header: string | JSX.Element;
-- noPadding?: boolean;
-- id?: string
-- className?: string
+### To use, create a <Notify> component anywhere in your page. Pass it a ref and the ref type of NotifyRef is provided to strictly type the ref. When wanting to display a notification create one by using `notifyRef.current.showNotify('This is a notification')`. Typescript might complain about the arguments so you may need to ignore this.

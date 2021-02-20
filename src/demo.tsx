@@ -11,14 +11,15 @@ const Demo = () => {
 
   const showNotification = () => {
     if (notifyRef && notifyRef.current) {
-      notifyRef.current.showNotify()
+      /* @ts-ignore */
+      notifyRef.current.showNotify('This is a notification')
     }
   }
 
   return (
     <div className="notificationDemo">
       <Button onClick={showNotification}>Show Notification</Button>
-      <Notify ref={notifyRef} type="success" text="test" position="top-right" />
+      <Notify ref={notifyRef} type="success" position="top-right" />
     </div>
   )
 }
