@@ -1,0 +1,26 @@
+import React, { Component, createRef, useRef } from 'react'
+import ReactDom from 'react-dom'
+import Button from './button'
+
+import Notify, { NotifyRef } from './notify'
+
+import './demoStyles.scss'
+
+const Demo = () => {
+  const notifyRef = createRef<NotifyRef>()
+
+  const showNotification = () => {
+    if (notifyRef && notifyRef.current) {
+      notifyRef.current.showNotify()
+    }
+  }
+
+  return (
+    <div className="notificationDemo">
+      <Button onClick={showNotification}>Show Notification</Button>
+      <Notify ref={notifyRef} type="success" text="test" position="top-right" />
+    </div>
+  )
+}
+
+ReactDom.render(<Demo />, document.getElementById('notify'))
